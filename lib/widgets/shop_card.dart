@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously, unnecessary_string_interpolations
+
 import 'package:flutter/material.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +46,7 @@ class ShopCard extends StatelessWidget {
           }
           else if (item.name == "Logout") {
             final response = await request.logout(
-                // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
+                
                 "http://localhost:8000/auth/logout/");
             String message = response["message"];
             if (response['status']) {
